@@ -1,0 +1,77 @@
+/**
+* Mixins for assisting with laying out elements
+* @author Rich Milns @richmilns
+*/
+
+/**
+ * IE6 friendly min-height (requires )
+ */
+.min-height(@height) {
+	min-height:@height;
+
+	.ie6 & {
+		height:auto !important;
+		height:@height;
+	}
+}
+
+/**
+ * Auto margins to make object centrally aligned
+ */
+.centered() {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/**
+ * Reset margin to 0
+ */
+.margin0() {
+	margin:0;
+}
+
+/**
+ * Reset padding to 0
+ */
+.padding0() {
+	padding:0;
+}
+
+/**
+ * Reset margin and padding to 0
+ */
+.margin-padding0() {
+	.margin0();
+	.padding0();
+}
+
+/**
+ * IE6/7 friendly display inline block
+ */
+.display-inline-block() {
+	display:inline-block;
+
+	.ie6 &,
+	.ie7 & {
+		zoom:1;
+		display:inline;
+	}
+}
+
+/**
+ * Totally removes the outline from an object, including Stubborn Firefox outlines
+ */
+.remove-outline() {
+	outline:none;
+
+	&:focus,
+	&:active,
+	&:visited,
+	&:hover {
+		outline:0 none !important;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+	}
+}

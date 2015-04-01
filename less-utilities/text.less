@@ -1,0 +1,27 @@
+/**
+* Mixins for styling text elements
+* @author Rich Milns @richmilns
+*/
+
+
+/**
+ * Negative text indent hides the text within an element
+ */
+.text-hidden() {
+	text-indent:-9999em;
+}
+
+/**
+ * Fix for fonts looking heavier than they should (almost faux bold) in Webkit browsers, and Firefox 25+ for Mac
+ */
+.reset-font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Stop webkit playing with font sizes on mobile devices
+ */
+.disable-mobile-font-resizing() {
+	-webkit-text-size-adjust: none;
+}

@@ -1,0 +1,43 @@
+/**
+* Mixins for clearing and floating elements
+* @author Rich Milns @richmilns
+*/
+
+/**
+ * Fixes clearing before & after the element that includes this mixin
+ */
+.clearfix() {
+	zoom:1;
+
+	&:before,
+	&:after{
+		content:"";
+		display:table;
+	}
+	&:after{
+		.clear();
+	}
+}
+
+/**
+ * Makes the element which includes these mixins clear above elements
+ */
+.clear() {
+	clear:both;
+}
+
+.clear-left() {
+	clear:left;
+}
+
+.clear-right() {
+	clear:right;
+}
+
+.pull-left() {
+	float:left;
+}
+
+.pull-right() {
+	float:right;
+}
