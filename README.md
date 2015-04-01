@@ -2,6 +2,8 @@
 
 A collection of useful mixins and libraries that can be installed as a CodeKit Framework for easy inclusion in your local projects
 
+I use these utilities in some of my other projects here on GitHub, so if you get a LESS compilation error in one of those, this is the place to look first :)
+
 ## Getting Started
 
 The easiest way to get started is to view [CodeKit's Framework](http://incident57.com/codekit/help.html#codekit-frameworks) settings and then add this as a new framework.
